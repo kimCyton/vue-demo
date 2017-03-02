@@ -8,11 +8,15 @@
         <span @click="remove(item.id)">X</span>
       </li>
     </ul>
+    <component-a></component-a>
   </div>
 </template>
 
 <script>
 import Store from './store'
+import ComponentA from './components/componentA.vue'
+//导入A组件
+
 export default {
   name: 'app',
   data:function() {
@@ -21,6 +25,8 @@ export default {
       content:''
     }
   },
+  components:{ComponentA},
+  //组件 的引用
   methods:{
     toggleComp:function(item){
       item.completed=!item.completed

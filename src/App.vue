@@ -8,7 +8,7 @@
         <span @click="remove(item.id)">X</span>
       </li>
     </ul>
-    <component-a></component-a>
+    <component-a msgfrommother="hehe"></component-a>
   </div>
 </template>
 

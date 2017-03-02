@@ -1,6 +1,8 @@
 <template>
 	<div class="hello">
 		<h1>{{msg}}</h1>
+		<h1>{{msgfrommother}}</h1>
+		<!-- 这里也可以取到父组件的属性键值 -->
 		<button v-on:click="onClickMe">click</button>
 	</div>
 
@@ -15,9 +17,10 @@
 		},
 		methods:{
 			onClickMe:function(){
-				alert("you clicked on the componentA")
+				console.log(this.msgfrommother)
 			}
-		}
+		},
+		props:['msgfrommother']//传递通信过渡 数组内为字符串的key属性
 	}
 
 

@@ -32,7 +32,7 @@ export default {
 		width:980px;
 		margin:0 auto;
 		background:#f1f1f1;
-		margin-top: 730px;
+		margin-top: 330px;
 		.f_p{
 			width: 25%;
 			float: left;

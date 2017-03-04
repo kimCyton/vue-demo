@@ -15,10 +15,10 @@
 		data:function(){
 			return {
 				navWords:[
-					{content:'首页',alink:'#',id:1},
-					{content:'产品',alink:'#',id:2},
-					{content:'其他',alink:'#',id:3},
-					{content:'联系我',alink:'#',id:4}
+					{content:'首页',alink:'#/home',id:1},
+					{content:'产品',alink:'#/product',id:2},
+					{content:'其他',alink:'#/others',id:3},
+					{content:'联系我',alink:'#/contact',id:4}
 				],
 				currentId:0
 			}

@@ -28,21 +28,20 @@
 	}
 </script>
 <style scoped lang='scss'>
-	$navHeight:50px;
+	$navHeight:110px;
 
 	.header{
 		background: #ccc;
 		width: 100%;
 		height: $navHeight;
 		ul{
-			padding-left: 100px;
-			width: 920px;
+			width: 100%;
 			margin: 0 auto;
 			li{
 				text-align: center;
 				padding: 0 10px;
 				height: 100%;
-				width: 80px;
+				width: 100px;
 				line-height: $navHeight;
 				display: inline-block;
 				a{
@@ -50,7 +49,7 @@
 					width: 100%;
 					height: 100%;
 					color: #fff;
-					font-size: 18px;
+					font-size: 26px;
 					&:hover{
 						color: #aaa;
 					}

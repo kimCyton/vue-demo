@@ -1,6 +1,9 @@
 <template>
 	<div class="contact">
-		<h1>Contact</h1>
+		<strong title='kim'>
+			name:KIMCYTON
+		</strong>
+		<p>@: <mark>850910629@qq.com</mark></p>
 	</div>
 </template>
 

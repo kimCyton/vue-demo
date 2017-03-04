@@ -29,18 +29,20 @@ export default {
 
 <style lang="scss" scoped>
 	.footer{
-		width:980px;
+		position: fixed;
+		bottom:0px;
+		width:100%;
 		margin:0 auto;
-		background:#f1f1f1;
-		margin-top: 330px;
+		background:rgba(255,255,255,.97);
+		max-height:180px;
 		.f_p{
 			width: 25%;
 			float: left;
-			padding:35px 25px 45px 30px;
+			padding:8px 15px 5px 20px;
 			box-sizing: border-box;
 			h4.title{
-				padding-left: 40px;
-				padding-bottom: 15px;
+				padding-left: 20px;
+				padding-bottom: 5px;
 				font-size: 15px;
 			}
 			p.detailLinks a{

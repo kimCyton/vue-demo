@@ -2,7 +2,14 @@ html,body{
 	background:#fff;
 	font-size: 12px;
 }
-html,body,div,ul,li,header,,footer,p,h1,h2,h3,h4,h5,h6{
+html,body{
+	width: 100%;
+	min-width:400px;
+}
+html,body{
+	margin:0 auto;
+}
+html,body,div,ul,li,header,footer,,summary,p,h1,h2,h3,h4,h5,h6{
 	margin: 0px;
   	padding: 0px;
 }

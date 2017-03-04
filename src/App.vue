@@ -8,7 +8,7 @@
 <template>
    <div id="app">
       <MyHeader></MyHeader>
-      <router-view></router-view>
+      <router-view style="padding:5px 10px;"></router-view>
       <MyFooter></MyFooter>
    </div>
 </template>
@@ -24,13 +24,13 @@ export default {
 
       }
    },
-  components:{MyHeader,MyFooter,MyTransition},
+   components:{MyHeader,MyFooter,MyTransition},
 }
 </script>
 
 <style lang="scss">
    #app{
-      width: 980px;
+      width: 100%;
       margin:0 auto;
    }
 </style>

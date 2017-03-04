@@ -9,10 +9,14 @@ import Contact from '../components/contact/contact.vue'
 
 export default new Router({
     routes: [
-        {path: '/home',component: Home},
-        {path: '/product/:id?',component: Product},
-        {path: '/others',component: Others},
-        {path: '/contact',component: Contact},
-        {path: '*',redirect: '/home'}
+		{path: '/home',component: Home},
+		{path: '/product/:id?',component: Product},
+		{path: '/others/:id?',component: Others,
+			children:[
+				{path:'child1',component:Contact}
+			]
+		},
+		{path: '/contact',component: Contact},
+		{path: '*',redirect: '/home'}
     ]
 })

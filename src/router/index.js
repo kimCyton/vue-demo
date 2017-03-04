@@ -8,12 +8,14 @@ import Others from '../components/others/others.vue'
 import Contact from '../components/contact/contact.vue'
 
 export default new Router({
-    routes: [
+   routes: [
 		{path: '/home',component: Home},
 		{path: '/product/:id?',component: Product},
 		{path: '/others/:id?',component: Others,
+			// 路由模板嵌套
 			children:[
-				{path:'child1',component:Contact}
+				{path:'child1',component:Contact},
+				{path:'child2',component:Home},
 			]
 		},
 		{path: '/contact',component: Contact},

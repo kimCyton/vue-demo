@@ -1,12 +1,9 @@
 <template>
 	<header class="header">
-		<ul>
-			<li v-for='(item,index) in navWords'>
-				<a v-bind:class='{active:index===currentId}'  v-on:click='currentId=index' v-bind:href='item.alink'>
-					{{item.content}}
-				</a>
-			</li>
-		</ul>
+		<router-link class="alinks" to='/home'>首页</router-link>
+		<router-link class="alinks" to='/product'>产品</router-link>
+		<router-link class="alinks" to='/others'>其他</router-link>
+		<router-link class="alinks" to='/contact'>联系我</router-link>
 	</header>
 </template>
 
@@ -14,13 +11,6 @@
 	export default{
 		data:function(){
 			return {
-				navWords:[
-					{content:'首页',alink:'#/home',id:1},
-					{content:'产品',alink:'#/product',id:2},
-					{content:'其他',alink:'#/others',id:3},
-					{content:'联系我',alink:'#/contact',id:4}
-				],
-				currentId:0
 			}
 		},
 		methods:{
@@ -34,30 +24,11 @@
 		background: #ccc;
 		width: 100%;
 		height: $navHeight;
-		ul{
-			width: 100%;
-			margin: 0 auto;
-			li{
-				text-align: center;
-				padding: 0 10px;
-				height: 100%;
-				width: 100px;
-				line-height: $navHeight;
-				display: inline-block;
-				a{
-					display: inline-block;
-					width: 100%;
-					height: 100%;
-					color: #fff;
-					font-size: 26px;
-					&:hover{
-						color: #aaa;
-					}
-				}
-				a.active{
-					color: #39c;
-				}
-			}
+		padding-left: 10px;
+		.alinks{
+			padding:5px 10px;
+			line-height: $navHeight;
+			font-size: 26px;
 		}
 	}
 </style>

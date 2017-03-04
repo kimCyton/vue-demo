@@ -36,12 +36,11 @@ module.exports = {
         }, {
           loader: "sass-loader" // compiles Sass to CSS
         }] //处理从右往左
-    }, {
+    }, { loader: 'babel-loader',
       test: /\.js$/,
-      loader: 'babel-loader',
-      exclude: /node_modules/
+      exclude: [/node_modules/,/js/]
     }, {
-      test: /\.(png|jpg|gif|svg)$/,
+      test: /\.(png|jpg|gif|svg|woff2|eot|woff|ttf)$/,
       loader: 'file-loader',
       options: {
         name: '[name].[ext]?[hash]'
@@ -50,7 +49,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      jquery: "jquery/src/jquery"
     }
   },
   devServer: {
@@ -80,6 +80,11 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
+    }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "windows.jQuery": "jquery"
     })
   ])
 }

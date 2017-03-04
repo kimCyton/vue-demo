@@ -1,9 +1,9 @@
 <template>
 	<footer class="footer">
 		<div v-for="item in customService" class='f_p'>
-			<h4 class="title">{{item.title}}</h4>
+			<h4 @click="titleChange" class="title">{{item.title}}</h4>
 			<p class="detailLinks">
-				<a v-for="obj in item.detailLinks" :href="obj.link">{{obj.content}}</a>
+				<a v-for="obj in item.detailLinks" target="_blank" :href="obj.link">{{obj.content}}</a>
 			</p>
 		</div>
 	</footer>
@@ -18,6 +18,11 @@ export default {
     	return {
     		customService:content.data_detail
     	};
+  	},
+  	methods:{
+  		titleChange(){
+  			console.log(1)
+  		}
   	}
 };
 </script>
@@ -27,7 +32,7 @@ export default {
 		width:980px;
 		margin:0 auto;
 		background:#f1f1f1;
-		margin-top: 30px;
+		margin-top: 730px;
 		.f_p{
 			width: 25%;
 			float: left;

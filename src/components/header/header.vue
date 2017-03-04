@@ -35,6 +35,7 @@
 		width: 100%;
 		height: $navHeight;
 		ul{
+			padding-left: 100px;
 			width: 920px;
 			margin: 0 auto;
 			li{
@@ -57,9 +58,6 @@
 				a.active{
 					color: #39c;
 				}
-			}
-			li:nth-of-type(1){
-				padding-left: 50px;
 			}
 		}
 	}

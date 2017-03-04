@@ -4,6 +4,7 @@
 			<button class="btn btn-default btn-lg" @click="sortBy">女士</button>
 			<button class="btn btn-default btn-lg" @click="sortByReverse">关注</button>
 			<button class="btn btn-default btn-lg" @click="sortByRandom">随机</button>
+			<mark>这里可以拿到路由参数：{{$route.params.id||"None now"}}</mark>
 		</div>
 		<div class="product">
 			<div v-for="item in products" class="content">

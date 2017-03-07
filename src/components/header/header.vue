@@ -4,6 +4,7 @@
 		<router-link class="alinks" to='/product'>产品</router-link>
 		<router-link class="alinks" to='/others'>其他</router-link>
 		<router-link class="alinks" to='/contact'>联系我</router-link>
+		<router-link class="alinks" to='/ES6'>ES6</router-link>
 	</header>
 </template>
 

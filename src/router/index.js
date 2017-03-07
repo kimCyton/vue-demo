@@ -6,6 +6,7 @@ import Home from '../components/home/home.vue'
 import Product from './../components/product/product.vue'
 import Others from '../components/others/others.vue'
 import Contact from '../components/contact/contact.vue'
+import ES6 from '../components/ES6/es6.vue'
 
 export default new Router({
    routes: [
@@ -19,6 +20,7 @@ export default new Router({
 			]
 		},
 		{path: '/contact',component: Contact},
+		{path: '/ES6',component: ES6},
 		{path: '*',redirect: '/home'}
-    ]
+	]
 })

@@ -2,11 +2,13 @@
 <template>
 	<div class='ES6'>
 		<h2>ES6 Study</h2>
+		<ghostButton class="gButton"></ghostButton>
 		<button class="btn btn-default" @click='go'>1</button>
 	</div>
 </template>
 
 <script>
+import GhostButton from './../messComponent/ghostButton.vue'
 export default {
    name: 'ES6',
    data () {
@@ -106,10 +108,9 @@ export default {
 				指数运算符
 					ES2016 新增了一个指数运算符（**）。
 			 */
-			console.log(2**5)
 		}
 	},
-	components:{},
+	components:{GhostButton},
 };
 </script>
 

@@ -3,12 +3,14 @@
 	<div class='ES6'>
 		<h2>ES6 Study</h2>
 		<ghostButton class="gButton"></ghostButton>
+		<ES6proxy class="proxy"></ES6proxy>
 		<button class="btn btn-default" @click='go'>1</button>
 	</div>
 </template>
 
 <script>
 import GhostButton from './../messComponent/ghostButton.vue'
+import ES6proxy from './../messComponent/proxy.vue'
 export default {
    name: 'ES6',
    data () {
@@ -110,7 +112,7 @@ export default {
 			 */
 		}
 	},
-	components:{GhostButton},
+	components:{GhostButton,ES6proxy},
 };
 </script>
 

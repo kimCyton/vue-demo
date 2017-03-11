@@ -5,6 +5,7 @@
 		<router-link class="alinks" to='/others'>其他</router-link>
 		<router-link class="alinks" to='/contact'>Counter</router-link>
 		<router-link class="alinks" to='/ES6'>ES6</router-link>
+		<router-link class="alinks" to='/telephone'>telephone</router-link>
 	</header>
 </template>
 

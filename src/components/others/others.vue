@@ -4,9 +4,6 @@
 		from path id : {{$route.params.id}}
 		<router-view></router-view>
 		<!-- 路由模板嵌套 -->
-		<ul>
-			<li v-for="item in $store.state.todos">{{item.text}}</li>
-		</ul>
 	</div>
 </template>
 

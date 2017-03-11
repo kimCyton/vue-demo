@@ -1,19 +1,31 @@
+import Vue from 'vue'
+import Vuex from 'vuex'
+Vue.use(Vuex)
 
-export default {
-	state:{
-		todos:[
-			{id:1,text:'hello',done:true},
-			{id:2,text:'world',done:true},
-			{id:3,text:'kim',done:true},
-			{id:4,text:'cyton',done:false}
-		],
-		count:1
+const state = {
+	count: 0
+}
+const mutations = {
+	increment(state){
+		state.count++
 	},
-	getters: { //（可以认为是 store 的计算属性）
-		doneTodos: state => { // Getters 接受 state 作为其第一个参数
-			return state.todos.filter(item => item.done)
-		}
-	},
-	mutations:{
+	decrement(state){
+		state.count--
 	}
 }
+
+const getters = {
+	evenOrOdd:state=>state.count%2==0?'even':'odd'
+}
+const actions ={
+	increment:({commit})=>commit('increment')
+}
+
+
+
+export default new Vuex.Store({
+	state,
+	getters,
+	mutations,
+	actions
+})

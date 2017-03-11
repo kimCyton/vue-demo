@@ -9,12 +9,9 @@ export default {
 		],
 		count:1
 	},
-	getters:{
-		doneTodos:state=>{
-			return state.todos.filter(item=>item.done)
-		},
-		doneTodosCount:(state,getters)=>{
-			return getters.doneTodos.length;
+	getters: { //（可以认为是 store 的计算属性）
+		doneTodos: state => { // Getters 接受 state 作为其第一个参数
+			return state.todos.filter(item => item.done)
 		}
 	},
 	mutations:{

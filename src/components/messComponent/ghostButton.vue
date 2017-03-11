@@ -99,9 +99,5 @@ export default {
 		border-radius: 3px;
 		box-sizing: border-box;
 		padding-left: 1px;
-		transition:all .4s;
-	}
-	.ghostButton:hover{
-		padding-left: 10px;
 	}
 </style>

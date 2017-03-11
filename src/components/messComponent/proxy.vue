@@ -1,9 +1,9 @@
 <!-- KIM CYTON -->
 <template>
-	<div class='proxy'>
-		<button class="btn btn-warning" @click="proxy">Iterator&for...of</button>
-		<a href="http://es6.ruanyifeng.com/#docs/iterator" target="blank">Iterator&for...of</a>
-	</div>
+	<span class='proxy'>
+		<button class="btn btn-warning" @click="proxy">proxy</button>
+		<a href="http://es6.ruanyifeng.com/#docs/proxy" target="blank">proxy</a>
+	</span>
 </template>
 
 <script>
@@ -14,7 +14,6 @@ export default {
 	},
 	methods:{
 		proxy(){
-
 			// let validator = {
 			// 	set:function(obj,prop,value) {
 			// 		if (prop==="age") {

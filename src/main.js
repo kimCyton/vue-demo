@@ -5,7 +5,7 @@ import './../node_modules/bootstrap/dist/css/bootstrap.css'
 import './../node_modules/animate.css'
 import router from './router'
 import Vuex from 'vuex'
-import store from './store/counter.js'
+import store from './store/index.js'
 
 // import axios from 'axios'
 // import VueAxios from 'vue-axios'

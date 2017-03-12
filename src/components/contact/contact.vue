@@ -1,6 +1,6 @@
 <template>
 	<div class="contact">
-    <h4>click <strong>{{$store.state.count}}</strong> {{$store.state.count|danFushu('time')}} ,
+    <h4>click <strong>{{$store.state.counter.count}}</strong> {{$store.state.count|danFushu('time')}} ,
       count is  <strong>{{evenOrOdd}}</strong>
     </h4>
     <button class="btn btn-default" @click="decrement">-</button>

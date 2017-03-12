@@ -17,11 +17,11 @@ Vue.use(Vuex)
 new Vue({
 	router,
 	VueResource,
-	Vuex,
+	// Vuex,
 	store,
-  el: '#app',
-  render: function(h){
-  	return h(App);
+	el: '#app',
+	render: function(h){
+	return h(App);
   }
   //render: h => h(App);
 })

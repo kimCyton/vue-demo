@@ -1,21 +1,22 @@
 <template>
 	<div class="others">
-		<h1>Others</h1>
-		from path id : {{$route.params.id}}
-		<router-view></router-view>
-		<!-- 路由模板嵌套 -->
+		<h3>test vue-antd</h3>
 	</div>
 </template>
-
 <script>
 export default {
 
-  name: 'others',
+	name: 'others',
 
   	data () {
     	return {
-
     	};
+  	},
+  	methods:{
+  	},
+  	mounted(){
+  	},
+  	components:{
   	}
 };
 </script>

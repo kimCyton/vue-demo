@@ -9,6 +9,10 @@
    <div id="app">
       <MyHeader></MyHeader>
       <router-view style="padding:5px 10px;"></router-view>
+      <rd-modal></rd-modal>
+      <rd-notification></rd-notification>
+      <rd-loadingbar></rd-loadingbar>
+      <rd-preview></rd-preview>
       <MyFooter></MyFooter>
    </div>
 </template>

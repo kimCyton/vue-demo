@@ -7,6 +7,15 @@ import router from './router'
 import Vuex from 'vuex'
 import store from './store/index.js'
 
+import { RadonInstall } from 'radon-ui'
+import './../node_modules/radon-ui/dist/radon-ui.css'
+Vue.use(RadonInstall, {
+    Modal: true,
+    Notification: true,
+    LoadingBar: true,
+    Preview: true
+})
+
 // import axios from 'axios'
 // import VueAxios from 'vue-axios'
 // Vue.use(VueAxios,axios)

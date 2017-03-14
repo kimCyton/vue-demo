@@ -6,7 +6,7 @@ import './../node_modules/animate.css'
 import router from './router'
 import Vuex from 'vuex'
 import store from './store/index.js'
-
+import $ from 'jQuery'
 import { RadonInstall } from 'radon-ui'
 import './../node_modules/radon-ui/dist/radon-ui.css'
 Vue.use(RadonInstall, {
@@ -15,6 +15,7 @@ Vue.use(RadonInstall, {
     LoadingBar: true,
     Preview: true
 })
+
 
 // import axios from 'axios'
 // import VueAxios from 'vue-axios'
@@ -25,8 +26,6 @@ Vue.use(Vuex)
 
 new Vue({
 	router,
-	VueResource,
-	// Vuex,
 	store,
 	el: '#app',
 	render: function(h){

@@ -1,10 +1,20 @@
 <template>
 	<div class="others" style='height: 1000px'>
-		<h3>test Radon UI</h3>
+		<h3 ref='title' @click='ref'>test Radon UI</h3>
 		<rd-audio :audio="audio"></rd-audio>
 		<rd-card-group id='cardgroup'>
+			<rd-card title="Voice" class='cardtitle'>
+				<p class="cardparagraph">
+				   《Voice》是韩国OCN电视台于2017年1月14日首播的悬疑剧，由金道赫执导，马珍媛编剧，张赫、李荷娜、白成铉等主演。该剧讲述守护犯罪现场黄金时间的112报案中心队员们，妻子因意外事故去世的刑警武镇赫与112报案中心队员姜权酒一同追查杀害家人的连锁杀人魔的过程中，解决事件的故事
+				</p>
+			</rd-card>
+			<rd-card title="Voice" class='cardtitle'>
+				<p class="cardparagraph">
+				   《Voice》是韩国OCN电视台于2017年1月14日首播的悬疑剧，由金道赫执导，马珍媛编剧，张赫、李荷娜、白成铉等主演。该剧讲述守护犯罪现场黄金时间的112报案中心队员们，妻子因意外事故去世的刑警武镇赫与112报案中心队员姜权酒一同追查杀害家人的连锁杀人魔的过程中，解决事件的故事
+				</p>
+			</rd-card>
 			<rd-card title="tag" class='cardtitle'>
-				<p>
+				<p class="cardparagraph">
 				   《Voice》是韩国OCN电视台于2017年1月14日首播的悬疑剧，由金道赫执导，马珍媛编剧，张赫、李荷娜、白成铉等主演。该剧讲述守护犯罪现场黄金时间的112报案中心队员们，妻子因意外事故去世的刑警武镇赫与112报案中心队员姜权酒一同追查杀害家人的连锁杀人魔的过程中，解决事件的故事
 				</p>
 			</rd-card>
@@ -22,14 +32,17 @@
 		<br>
 		<br>
 		<br>
-		<rd-slider :slider="slider"></rd-slider>
-			<rd-button type="primary">
-			<rd-tooltip>这里是tooltip</rd-tooltip>鼠标移上来就会出现提示 按钮
-		</rd-button>
-		<span>鼠标移上来就会出现提示<rd-tooltip>这里是tooltip</rd-tooltip></span>
+		<div id="buttonGroup">
+			<rd-slider :slider="slider"></rd-slider>
+				<rd-button type="primary">
+				<rd-tooltip>这里是tooltip</rd-tooltip>鼠标移上来就会出现提示 按钮
+			</rd-button>
+			<span>鼠标移上来就会出现提示<rd-tooltip>这里是tooltip</rd-tooltip></span>
+		</div>
 	</div>
 </template>
 <script>
+import $ from 'jQuery'
 import {rdButton,rdDropButton,rdTable,rdCard,rdCardGroup,rdAudio,rdSlider,rdTooltip} from 'radon-ui'
 export default {
 
@@ -168,6 +181,9 @@ export default {
 					text: ''
 				}
 			})
+		},
+		ref(){
+			console.log(this.$refs.title.innerHTML="new")
 		}
 	},
   	mounted(){
@@ -179,7 +195,13 @@ export default {
 </script>
 
 <style lang="css" scoped>
-	#cardgroup p{
+	#cardgroup{
+		padding: 30px;
+	}
+	p.cardparagraph{
 		font-size: 16px;
+	}
+	#buttonGroup{
+		padding: 80px;
 	}
 </style>

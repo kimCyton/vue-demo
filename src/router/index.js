@@ -8,6 +8,7 @@ import Others from '../components/others/others.vue'
 import Contact from '../components/contact/contact.vue'
 import ES6 from '../components/ES6/es6.vue'
 import Telephone from '../components/telephone/telephone.vue'
+import RadonUI from '../components/radonui/radonui.vue'
 
 export default new Router({
    routes: [
@@ -23,6 +24,7 @@ export default new Router({
 		{path: '/contact',component: Contact},
 		{path: '/ES6',component: ES6},
 		{path: '/telephone',component: Telephone},
+		{path: '/radonui',component: RadonUI},
 		{path: '*',redirect: '/home'}
 	]
 })

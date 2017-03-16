@@ -1,13 +1,18 @@
 <!-- KIM CYTON -->
 <template>
 	<div class='telephone'>
-		<h3>from counter :{{$store.state.counter.count}}</h3>
-		{{getCustomNum}}
-		<ul>
+		<overlay :propa='propa'>
+			<h1 slot='title'>这是插槽1的标题</h1>
+			<span></span>
+			<p slot='footer'>这是插槽1的tail</p>
+		</overlay>
+		<!-- <h3>from counter :{{$store.state.counter.count}}</h3> -->
+		<!-- {{getCustomNum}} -->
+		<!-- <ul>
 			<li v-for="item in $store.state.telephone.customs">
 				<strong>{{item.name}}</strong>  tel: <span>{{item.tel}}</span>
 			</li>
-		</ul>
+		</ul> -->
 		<br>
 		<h2>datapicker</h2>
 		<div class="row">
@@ -21,10 +26,12 @@
 <script>
 import myDatepicker from 'vue-datepicker'
 import { mapGetters , mapActions } from 'vuex'
+import overlay from './../usefulCompenent/overlay.vue'
 export default {
    name: 'telephone',
    data () {
 		return {
+			propa:22,	//prop传递
 			startTime: {
 				time: ''
 			},
@@ -91,7 +98,7 @@ export default {
 	computed:mapGetters([
 		'getCustomNum'
 	]),
-	components:{'date-picker': myDatepicker},
+	components:{'date-picker': myDatepicker,overlay},
 };
 </script>
 

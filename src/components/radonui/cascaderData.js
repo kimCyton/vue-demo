@@ -4,13 +4,28 @@ const datacascader = [{
 	children: [{
 		value: 'sichuan',
 		label: '四川',
-		children: [{
-			value: 'chegndu',
-			label: '成都'
-		}, {
-			value: 'deyang',
-			label: '德阳'
-		}]
+		children: [
+			{value: 'chegndu',label: '成都'},
+			{value: 'deyang',label: '德阳'},
+			{value: 'guangyuan',label: '广元'},
+			{value: 'mianyang',label: '绵阳'},
+			{value: 'nanchong',label: '南充'},
+			{value: 'guangan',label: '广安'},
+			{value: 'suining',label: '遂宁'},
+			{value: 'neijiang',label: '内江'},
+			{value: 'leshan',label: '乐山'},
+			{value: 'zigong',label: '自贡'},
+			{value: 'luzhou',label: '泸州'},
+			{value: 'yibin',label: '宜宾'},
+			{value: 'panzhihua',label: '攀枝花'},
+			{value: 'bazhong',label: '巴中'},
+			{value: 'dazhou',label: '达州'},
+			{value: 'ziyang',label: '资阳'},
+			{value: 'meishan',label: '眉山'},
+			{value: 'abazhou',label: '阿坝州'},
+			{value: 'ganzizhou',label: '甘孜州'},
+			{value: 'liangshanzhou',label: '凉山州'},
+		]
 	}]
 }, {
 	value: 'America',

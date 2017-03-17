@@ -1,6 +1,7 @@
-<!-- KIM CYTON :插槽以及数据传递 -->
+<!-- KIM CYTON :插槽以及数据传递 FatherComponent:telephone -->
 <template>
 	<div class='overlay'>
+		<button class="btn" v-on:click='addOne'>{{counter}}</button>
 		<slot name='title'></slot>
 
 		<span>{{propa}}</span>
@@ -26,15 +27,16 @@ export default {
    },
    data () {
    	return {
-
+   		counter:0
    	};
 	},
 	mounted:function(){
 
 	},
 	methods:{
-		methods1(){
-
+		addOne(){
+			this.counter+=1;
+			this.$emit('plus')
 		}
 	},
 	components:{},

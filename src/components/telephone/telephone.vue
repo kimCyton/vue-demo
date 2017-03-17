@@ -1,9 +1,14 @@
 <!-- KIM CYTON -->
 <template>
 	<div class='telephone'>
-		<overlay :propa='propa'>
+		<p>{{fatherNum}}</p>
+		<overlay v-on:plus="add" :propa='propa'>
 			<h1 slot='title'>这是插槽1的标题</h1>
 			<span></span>
+			<p slot='footer'>这是插槽1的tail</p>
+		</overlay>
+		<overlay v-on:plus="add">
+			<h1 slot='title'>这是插槽1的标题</h1>
 			<p slot='footer'>这是插槽1的tail</p>
 		</overlay>
 		<!-- <h3>from counter :{{$store.state.counter.count}}</h3> -->
@@ -31,6 +36,7 @@ export default {
    name: 'telephone',
    data () {
 		return {
+			fatherNum:0,
 			propa:22,	//prop传递
 			startTime: {
 				time: ''
@@ -93,6 +99,9 @@ export default {
 	methods:{
 		getTime(){
 			console.log(this.startTime.time)
+		},
+		add(){
+			this.fatherNum+=1
 		}
 	},
 	computed:mapGetters([

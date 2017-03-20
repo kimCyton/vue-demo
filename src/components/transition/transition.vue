@@ -6,11 +6,11 @@
 		<transition
 		    name="custom-classes-transition"
 		    enter-active-class="animated tada"
-		    leave-active-class="animated bounceOutRight"
+		    leave-active-class="animated pulse"
 		  >
 			<p v-if="show">hello</p>
 		</transition>
-		<input type="text" v-focus="{ color: '#39c', text: 'hello!' }">
+		<!-- <input type="text" v-focus="{ color: '#39c', text: 'hello!' }"> -->
 	</div>
 </template>
 

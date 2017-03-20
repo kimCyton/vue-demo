@@ -7,6 +7,7 @@
 		<router-link class="alinks" to='/ES6'>ES6</router-link>
 		<router-link class="alinks" to='/telephone'>telephone</router-link>
 		<router-link class="alinks" to='/radonui'>radonui</router-link>
+		<router-link class="alinks" to='/test'>Test</router-link>
 	</header>
 </template>
 

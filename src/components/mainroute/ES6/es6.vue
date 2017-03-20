@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import GhostButton from './../messComponent/ghostButton.vue'
-import ES6proxy from './../messComponent/proxy.vue'
-import ES6reflect from './../messComponent/reflect.vue'
-import ES6generator from './../messComponent/generator.vue'
+import GhostButton from './../../messComponent/ghostButton.vue'
+import ES6proxy from './../../messComponent/proxy.vue'
+import ES6reflect from './../../messComponent/reflect.vue'
+import ES6generator from './../../messComponent/generator.vue'
 export default {
    name: 'ES6',
    data () {

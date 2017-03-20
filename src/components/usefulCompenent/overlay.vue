@@ -1,11 +1,11 @@
 <!-- KIM CYTON :插槽以及数据传递 FatherComponent:telephone -->
 <template>
 	<div class='overlay'>
-		<button class="btn" v-on:click='addOne'>{{counter}}</button>
 		<slot name='title'></slot>
-
-		<span>{{propa}}</span>
-		<p>slotcontent goes here ...</p>
+		<span @click="getWindow">{{propa}}</span>
+		<i v-show='dataBrowser'>equals</i>
+		<mark>{{dataBrowser}}</mark>
+		<p>{{propb}} slotcontent goes here ...</p>
 		<p>slotcontent goes here ...</p>
 		<p>slotcontent goes here ...</p>
 
@@ -20,23 +20,26 @@ export default {
    name: 'overlay',
    props:{
    	propa:{	//prop传递 设置: 类型
-   		type:Number,
+   		type:String,
    		// 设置: 默认值
+   		default:"获取该浏览器信息"
+   	},
+   	propb:{
+   		type:Number,
    		default:1
    	}
    },
    data () {
    	return {
-   		counter:0
+   		dataBrowser:'',
    	};
 	},
 	mounted:function(){
 
 	},
 	methods:{
-		addOne(){
-			this.counter+=1;
-			this.$emit('plus')
+		getWindow(){
+			this.dataBrowser = window.clientInformation.vendor
 		}
 	},
 	components:{},
@@ -45,5 +48,8 @@ export default {
 
 <style lang='scss' scoped>
 	footer{
+	}
+	mark{
+		padding: 0;
 	}
 </style>

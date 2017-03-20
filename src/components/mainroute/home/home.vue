@@ -24,8 +24,7 @@
 </template>
 
 <script>
-import MyTransition from '../transition/transition.vue'
-import $ from './../../../node_modules/jquery/dist/jquery.min.js'
+import MyTransition from '../../transition/transition.vue'
 export default {
   	name: 'home',
   	data () {

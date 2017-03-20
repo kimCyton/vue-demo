@@ -8,7 +8,7 @@
 <template>
    <div id="app">
       <MyHeader></MyHeader>
-      <router-view style="padding:5px 10px;"></router-view>
+      <router-view></router-view>
       <rd-modal></rd-modal>
       <rd-notification></rd-notification>
       <rd-loadingbar></rd-loadingbar>
@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import MyHeader from './components/header/header.vue'
-import MyFooter from './components/footer/footer.vue'
+import MyHeader from './components/structure/header/header.vue'
+import MyFooter from './components/structure/footer/footer.vue'
 import MyTransition from './components/transition/transition.vue'
 
 export default {
@@ -34,6 +34,7 @@ export default {
 
 <style lang="scss">
    #app{
+      min-width:950px;
       width: 100%;
       margin:0 auto;
    }

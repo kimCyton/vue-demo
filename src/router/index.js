@@ -2,13 +2,14 @@ import Vue from 'vue'
 import Router from 'vue-router'
 Vue.use(Router)
 
-import Home from '../components/home/home.vue'
-import Product from './../components/product/product.vue'
-import Others from '../components/others/others.vue'
-import Contact from '../components/contact/contact.vue'
-import ES6 from '../components/ES6/es6.vue'
-import Telephone from '../components/telephone/telephone.vue'
-import RadonUI from '../components/radonui/radonui.vue'
+import Home from '../components/mainroute/home/home.vue'
+import Product from './../components/mainroute/product/product.vue'
+import Others from '../components/mainroute/others/others.vue'
+import Contact from '../components/mainroute/contact/contact.vue'
+import ES6 from '../components/mainroute/ES6/es6.vue'
+import Telephone from '../components/mainroute/telephone/telephone.vue'
+import RadonUI from '../components/mainroute/radonui/radonui.vue'
+import Test from '../components/mainroute/test/test.vue'
 
 export default new Router({
    routes: [
@@ -25,6 +26,7 @@ export default new Router({
 		{path: '/ES6',component: ES6},
 		{path: '/telephone',component: Telephone},
 		{path: '/radonui',component: RadonUI},
-		{path: '*',redirect: '/home'}
+		{path: '/test',component: Test},
+		{path: '*',redirect: '/test'}
 	]
 })

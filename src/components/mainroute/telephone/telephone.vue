@@ -2,13 +2,9 @@
 <template>
 	<div class='telephone'>
 		<p>{{fatherNum}}</p>
-		<overlay v-on:plus="add" :propa='propa'>
+		<overlay :propa='dataA' :propb='dataB'>
 			<h1 slot='title'>这是插槽1的标题</h1>
 			<span></span>
-			<p slot='footer'>这是插槽1的tail</p>
-		</overlay>
-		<overlay v-on:plus="add">
-			<h1 slot='title'>这是插槽1的标题</h1>
 			<p slot='footer'>这是插槽1的tail</p>
 		</overlay>
 		<!-- <h3>from counter :{{$store.state.counter.count}}</h3> -->
@@ -31,13 +27,14 @@
 <script>
 import myDatepicker from 'vue-datepicker'
 import { mapGetters , mapActions } from 'vuex'
-import overlay from './../usefulCompenent/overlay.vue'
+import overlay from './../../usefulCompenent/overlay.vue'
 export default {
    name: 'telephone',
    data () {
 		return {
 			fatherNum:0,
-			propa:22,	//prop传递
+			dataA:'ClickMe To Get Browser vendor',	//prop传递
+			dataB:2,	//prop传递
 			startTime: {
 				time: ''
 			},

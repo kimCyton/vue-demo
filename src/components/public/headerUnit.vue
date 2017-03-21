@@ -9,7 +9,6 @@
 						fontSize:headerStyle.fontsize+'px',
 						color:headerStyle.fontcolor,
 					}"
-					target="blank"
 					:href="[item.link+'/'+item.name]"
 				>
 					{{item.name}}

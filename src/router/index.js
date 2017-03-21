@@ -11,6 +11,10 @@ import Telephone from '../components/mainroute/telephone/telephone.vue'
 import RadonUI from '../components/mainroute/radonui/radonui.vue'
 import Test from '../components/mainroute/test/test.vue'
 
+//ES6
+import varibleDeconstruction from '../components/mainroute/ES6/deconstruction.vue'
+import letconst from '../components/mainroute/ES6/let_Const.vue'
+
 export default new Router({
    routes: [
 		{path: '/home',component: Home},
@@ -23,10 +27,16 @@ export default new Router({
 			]
 		},
 		{path: '/contact',component: Contact},
-		{path: '/ES6',component: ES6},
+		{path: '/ES6',component: ES6,
+			children:[ //ES6 study details
+				{path:'deconstruction',component:varibleDeconstruction},
+				{path:'let_Const',component:letconst},
+				{path:'*',component:letconst},
+			]
+		},
 		{path: '/telephone',component: Telephone},
 		{path: '/radonui',component: RadonUI},
 		{path: '/test',component: Test},
-		{path: '*',redirect: '/test'}
+		{path: '*',redirect: '/ES6'}
 	]
 })

@@ -1,12 +1,14 @@
 <!-- KIM CYTON -->
 <template>
 	<div class='ES6'>
-		<h2>ES6 Study</h2>
-		<ghostButton class="gButton"></ghostButton>
+		<headerUnit :headerStyle="headerStyle1"></headerUnit>
+		<!-- <h2>ES6 Study</h2> -->
+		<!-- <ghostButton class="gButton"></ghostButton>
 		<ES6proxy class="proxy"></ES6proxy>
 		<ES6reflect class="reflect"></ES6reflect>
 		<ES6generator class="generator"></ES6generator>
-		<button class="btn btn-default" @click='go'>1</button>
+		<button class="btn btn-default" @click='go'>1</button> -->
+		<router-view></router-view>
 	</div>
 </template>
 
@@ -15,10 +17,25 @@ import GhostButton from './../../messComponent/ghostButton.vue'
 import ES6proxy from './../../messComponent/proxy.vue'
 import ES6reflect from './../../messComponent/reflect.vue'
 import ES6generator from './../../messComponent/generator.vue'
+import headerUnit from './../../public/headerUnit.vue'
 export default {
    name: 'ES6',
    data () {
    	return {
+   		headerStyle1:{
+   			bgcolor:"pink",
+   			fontsize:22,
+   			fontcolor:"#fff",
+   			lineheight:2,
+   			titles:[//set components of ES6 study
+					{name:"let_Const",link:"#/ES6"},
+					{name:"deconstruction",link:"#/ES6"},
+					{name:"Cyton",link:"#/ES6"},
+					{name:"parkDog",link:"#/ES6"},
+					{name:"parCheunYU",link:"#/ES6"},
+					{name:"chMino",link:"#/ES6"},
+				]
+   		},
    	};
 	},
 	mounted:function(){
@@ -120,7 +137,8 @@ export default {
 		GhostButton,
 		ES6proxy,
 		ES6reflect,
-		ES6generator
+		ES6generator,
+		headerUnit
 	},
 };
 </script>
